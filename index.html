@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Карточки</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Карточки -->
+    <div class="cards">
+      <div class="card"> <!-- 1 -->       
+        <img src="images/Harry Potter.jpg" class="image">        
+        <p class="name">Гарри Поттер</p>
+        <div class="information">    
+          <div class="filds">
+            <p>Год выпуска</p>
+            <p>Страна</p>
+            <p>Жанр</p>
+            <p>Режиссер</p>
+            <p>Слоган</p>
+          </div>
+          <div class="values">
+            <p>2001</p>
+            <p>Великобритания, США</p>
+            <p>фэнтези, приключения</p>
+            <p>Крис Коламбус</p>
+            <p>&laquo;Путешествие в твою мечту&raquo;</p>            
+          </div>
+          <div class="buttons">
+            <input type="checkbox" class="checkDelete">
+            <button class="editButton">Редактировать</button>           
+          </div>
+        </div>        
+      </div>
+
+      <div class="card"> <!-- 2 -->      
+        <img src="images/The Hunger Games.jpg" class="image">        
+        <p class="name">Голодные игры</p>
+        <div class="information">    
+            <div class="filds">
+              <p>Год выпуска</p>
+              <p>Страна</p>
+              <p>Жанр</p>
+              <p>Режиссер</p>
+              <p>Слоган</p>
+            </div>
+            <div class="values">
+              <p>2012</p>
+              <p>США</p>
+              <p>фантастика, боевик</p>
+              <p>Гэри Росс</p>
+              <p>&laquo;Весь мир смотрит&raquo;</p>
+            </div>
+        </div> 
+        <div class="buttons">
+          <input type="checkbox" class="checkDelete">
+          <button class="editButton">Редактировать</button>            
+        </div>       
+      </div>
+
+      <div class="card"> <!-- 3 -->
+        <img src="images/The Lord Of the Rings.jpg" class="image">
+        <p class="name">Властeлин колец</p>
+        <div class="information">    
+            <div class="filds">
+                <p>Год выпуска</p>
+                <p>Страна</p>
+                <p>Жанр</p>
+                <p>Режиссер</p>
+                <p>Слоган</p>
+            </div>
+            <div class="values">
+                <p>2001</p>
+                <p>США, Новая Зеландия</p>
+                <p>фэнтези, приключения</p>
+                <p>Питер Джексон</p>
+                <p>&laquo;Power can be held in the smallest of things...&raquo;</p>
+            </div>
+        </div> 
+        <div class="buttons">
+          <input type="checkbox" class="checkDelete">
+          <button class="editButton">Редактировать</button>            
+        </div>       
+      </div> 
+    </div>
+
+    <!-- Форма "Редактировать" -->
+    <div class="editForm" id="editForm">
+      <form action="" class="form">
+        <div class="info"> 
+          
+          <div class="field">
+            <label>Название</label>
+            <input type="text" name="name_field" id="name_field" required>
+          </div>  
+          
+          <div class="field">
+            <label>Год выпуска</label>
+            <input type="number" name="year" id="year" required>
+          </div>
+          
+          <div class="field">
+            <label>Страна</label>
+            <input type="text" name="country" id="country" required>
+          </div>
+
+          <div class="field">
+            <label>Жанр</label>
+            <input type="text" name="genre" id="genre" required>
+          </div>
+
+          <div class="field">
+            <label>Режиссер</label>
+            <input type="text" name="director" id="director" required>
+          </div>
+
+          <div class="field">
+            <label>Слоган</label>
+            <input type="text" name="slogan" id="slogan" required>
+          </div>
+          
+          <div class="field">
+            <label>Изображение</label>
+            <input type="file" name="card_img">
+          </div>          
+        </div>
+        <div class="formButtons">
+            <input type="submit" value="Сохранить">
+            <button id="cancel" formnovalidate>Отмена</button>
+        </div>
+      </form>
+    </div>
+
+    <button onclick="deleteCard()" class="deleteButton">Удалить</button>
+    <button onclick="chooseAll()" class="chooseAllButton">Выбрать все</button>
+  </body>
+</html>
